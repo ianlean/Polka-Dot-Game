@@ -1,6 +1,7 @@
 class BoundingCircle {
     constructor(x, y, radius) {
         Object.assign(this, { x, y, radius });
+        this.removeFromWorld = false
     };
 
     //for debugging purposes
@@ -15,23 +16,6 @@ class BoundingCircle {
     update() {
 
     }
-
-    // collide (oth) {
-    //     var a;
-    //     var x;
-    //     var y;
-    
-    //     a = this.radius + oth.radius;
-    //     x = this.x - oth.x;
-    //     y = this.y - oth.y;
-    
-    //     if (a > (x*x) + (y*y)) {
-    //         // console.log("DFHSJFNASJDFN");
-    //         return true;
-    //     } else {
-    //         return false;
-    //     }
-    // }
 
     collide(oth) {
         //compare the distance to combined radii

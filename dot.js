@@ -6,6 +6,7 @@ class Dot {
         this.x = 750;
         this.y = 425;
         this.boundingcircle = new BoundingCircle(this.x, this.y, 10);
+        this.removeFromWorld = false;
     };
 
     update() {

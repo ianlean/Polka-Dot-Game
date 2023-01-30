@@ -2,11 +2,12 @@ class Menu{
     constructor(game,x,y) {
         Object.assign(this, { game});
         this.game = game;
+        this.removeFromWorld = false;
     };
 
     update() {
         
-        if(this.game.click != null && this.game.click.y > 475 && this.game.click.y < 515) {
+        if(this.game.click && this.game.click.y > 475 && this.game.click.y < 515) {
             this.game.click.y = 0;
             this.removeFromWorld = true;
             this.game.addEntity(new Scene(this.game));
@@ -23,7 +24,7 @@ class Menu{
     
 
         ctx.font =  '60px ""'
-        ctx.fillStyle = 'Yellow';
+        ctx.fillStyle = 'Red';
         ctx.fillText("Big Fish, Small Pond", 600,450);
 
         

@@ -32,6 +32,6 @@ ASSET_MANAGER.downloadAll(() => {
 	// 	gameEngine.addEntity(new EvilCircle(gameEngine,bool1,bool2,x,y, Math.random()*100));
 	//}
 	game.init(ctx);
-	game.addEntity(new Menu())
+	game.addEntity(new Menu(game))
 	game.start();
 });
