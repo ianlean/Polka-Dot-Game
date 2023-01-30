@@ -15,34 +15,34 @@ class Scene {
 
 
     loadLevel() {
-        this.game.addEntity(new Dot(this.game));
 
-        this.game.addEntity(new EvilCircle(this.game, true, false, 50, 20, 25));
-        // this.game.addEntity(new EvilCircle(this.game, false,true,1300, 100,22));
-        // this.game.addEntity(new EvilCircle(this.game, false,false,1300, 400,40));
-        // this.game.addEntity(new EvilCircle(this.game, true,true,1300, 400,50));
-        // this.game.addEntity(new EvilCircle(this.game, false,true,1000, 700,52));
-        // this.game.addEntity(new EvilCircle(this.game, true,false,200, 600,84));
-        // this.game.addEntity(new EvilCircle(this.game, true,true,100, 40,50));
-        // this.game.addEntity(new EvilCircle(this.game, false,true,2000, 70,52));
-        // this.game.addEntity(new EvilCircle(this.game, true,false,2200, 200,84));
-        // this.game.addEntity(new EvilCircle(this.game, true,false,50, 60,84));
-        // this.game.addEntity(new EvilCircle(this.game, true,true,-1100, 40,50));
-        // this.game.addEntity(new EvilCircle(this.game, false,true,-100, 70,52));
-        // this.game.addEntity(new EvilCircle(this.game, true,false,1500, 20,84));
-        // this.game.addEntity(new EvilCircle(this.game, true, false, 50, 20, 25));
-        // this.game.addEntity(new EvilCircle(this.game, false,true,1300, 100,22));
-        // this.game.addEntity(new EvilCircle(this.game, false,false,1300, 400,40));
-        // this.game.addEntity(new EvilCircle(this.game, true,true,1300, 400,50));
-        // this.game.addEntity(new EvilCircle(this.game, false,true,1000, 700,52));
-        // this.game.addEntity(new EvilCircle(this.game, true,false,200, 600,84));
-        // this.game.addEntity(new EvilCircle(this.game, true,true,100, 40,50));
-        // this.game.addEntity(new EvilCircle(this.game, false,true,2000, 70,52));
-        // this.game.addEntity(new EvilCircle(this.game, true,false,2200, 200,84));
-        // this.game.addEntity(new EvilCircle(this.game, true,false,50, 60,84));
-        // this.game.addEntity(new EvilCircle(this.game, true,true,-1100, 40,50));
-        // this.game.addEntity(new EvilCircle(this.game, false,true,-100, 70,52));
-        // this.game.addEntity(new EvilCircle(this.game, true,false,1500, 20,84));
+        this.game.addEntity(new EvilCircle(this.game, true, false, 50, 20));
+        this.game.addEntity(new EvilCircle(this.game, false,true,1300, 100));
+        this.game.addEntity(new EvilCircle(this.game, false,false,1300, 400));
+        this.game.addEntity(new EvilCircle(this.game, true,true,1300, 400));
+        this.game.addEntity(new EvilCircle(this.game, false,true,1000, 700));
+        this.game.addEntity(new EvilCircle(this.game, true,false,200, 600));
+        this.game.addEntity(new EvilCircle(this.game, true,true,100, 40));
+        this.game.addEntity(new EvilCircle(this.game, false,true,2000, 70));
+        this.game.addEntity(new EvilCircle(this.game, true,false,2200, 200));
+        this.game.addEntity(new EvilCircle(this.game, true,false,50, 60));
+        this.game.addEntity(new EvilCircle(this.game, true,true,-1100, 40));
+        this.game.addEntity(new EvilCircle(this.game, false,true,-100, 70));
+        this.game.addEntity(new EvilCircle(this.game, true,false,1500, 20));
+        this.game.addEntity(new EvilCircle(this.game, true, false, 50, 20));
+        this.game.addEntity(new EvilCircle(this.game, false,true,1300, 100));
+        this.game.addEntity(new EvilCircle(this.game, false,false,1300, 400));
+        this.game.addEntity(new EvilCircle(this.game, true,true,1300, 400));
+        this.game.addEntity(new EvilCircle(this.game, false,true,1000, 700));
+        this.game.addEntity(new EvilCircle(this.game, true,false,200, 600));
+        this.game.addEntity(new EvilCircle(this.game, true,true,100, 40));
+        this.game.addEntity(new EvilCircle(this.game, false,true,2000, 70));
+        this.game.addEntity(new EvilCircle(this.game, true,false,2200, 200));
+        this.game.addEntity(new EvilCircle(this.game, true,false,50, 60));
+        this.game.addEntity(new EvilCircle(this.game, true,true,-1100, 40));
+        this.game.addEntity(new EvilCircle(this.game, false,true,-100, 70));
+        this.game.addEntity(new EvilCircle(this.game, true,false,1500, 20));
+        this.game.addEntity(new Dot(this.game));
     };
     addPoints(p) {
         this.scoreTime += p;

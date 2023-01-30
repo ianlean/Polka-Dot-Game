@@ -1,6 +1,6 @@
 class EvilCircle {
 
-    constructor(game, postiveX, postiveY, givenX, givenY, radius) {
+    constructor(game, postiveX, postiveY, givenX, givenY) {
         this.game = game;
         this.positiveDirectionX = postiveX;
         this.positiveDirectionY = postiveY;
