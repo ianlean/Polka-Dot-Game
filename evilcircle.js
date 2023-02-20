@@ -1,5 +1,6 @@
 class EvilCircle {
 
+
     constructor(game, postiveX, postiveY, givenX, givenY) {
         this.game = game;
         this.positiveDirectionX = postiveX;
@@ -59,7 +60,6 @@ class EvilCircle {
             ctx.strokeStyle = "Red";
             //ctx.fillStyle ="#" +  Math.floor(Math.random()*0xFFFFFF).toString(16);
             ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
-            //ctx.fillStyle = "Red";
             ctx.fill();
             ctx.stroke();
         }
@@ -72,9 +72,9 @@ class EvilCircle {
     regenerate() {
         
         var spawnFromSides = Math.random();
-
-        this.radius = Math.random()* 50;
-        if (spawnFromSides > 0.5) {
+        
+        this.radius = Math.random()* (this.game.dot.radius + 40);
+        if (spawnFromSides > 0.5) { //spawn from above or below
             var temp = Math.random();
             if (temp > 0.5) { //spawn down
                 this.x = this.random(0, 1500);
@@ -83,7 +83,7 @@ class EvilCircle {
                 this.x = this.random(0, 1500);//spawn above
                 this.y = this.random(-400, -200);
             }
-        } else {
+        } else { //spawn from left or right
             var temp = Math.random();
             if (temp > 0.5) {
                 this.x = this.random(1700,1900);
@@ -93,5 +93,6 @@ class EvilCircle {
                 this.y = this.random(0, 850);
             }
         }
+        //this.game.ctx.fillStyle ="#" +  Math.floor(Math.random()*0xFFFFFF).toString(16);
     }
 };

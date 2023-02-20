@@ -48,6 +48,7 @@ class AssetManager {
                         var aud = new Audio();
                         aud.addEventListener("loadeddata", function () {
                             console.log("Loaded " + this.src);
+                            aud.currentTime = 0;
                             that.successCount++;
                             if (that.isDone()) callback();
                         });
@@ -67,6 +68,7 @@ class AssetManager {
                         aud.load();
     
                         this.cache[path] = aud;
+                        // console.log(path);
                         break;
                 }
         }
@@ -79,8 +81,42 @@ class AssetManager {
     playAsset(path) {
         let audio = this.cache[path];
         audio.currentTime = 0;
-        audio.media = true;
         audio.play();
     };
+
+    muteAudio(mute) {
+        for (var key in this.cache) {
+            let asset = this.cache[key];
+            if (asset instanceof Audio) {
+                asset.muted = mute;
+            }
+        }
+    };
+
+    adjustVolume(volume) {
+        for (var key in this.cache) {
+            let asset = this.cache[key];
+            if (asset instanceof Audio) {
+                asset.volume = volume;
+            }
+        }
+    };
+
+    pauseBackgroundMusic() {
+        for (var key in this.cache) {
+            let asset = this.cache[key];
+            if (asset instanceof Audio) {
+                asset.pause();
+                asset.currentTime = 0;
+            }
+        }
+    };
+
+    autoRepeat(path) {
+        var aud = this.cache[path];
+        aud.addEventListener("ended", function () {
+            aud.play();
+        }
+    );}
 };
 

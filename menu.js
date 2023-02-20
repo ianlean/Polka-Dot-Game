@@ -7,8 +7,8 @@ class Menu{
 
     update() {
         
-        if(this.game.click && this.game.click.y > 475 && this.game.click.y < 515) {
-            this.game.click.y = 0;
+        if(this.game.click && this.game.click.y >= 475 && this.game.click.y < 520) {
+            this.game.click = false;
             this.removeFromWorld = true;
             this.game.addEntity(new Scene(this.game));
         }
@@ -25,15 +25,15 @@ class Menu{
 
         ctx.font =  '60px ""'
         ctx.fillStyle = 'Red';
-        ctx.fillText("Big Fish, Small Pond", 600,450);
+        ctx.fillText("Big Fish, Small Pond", 500,450);
 
         
 
 
         ctx.strokeStyle = 'RED';
         ctx.font =  '48px ""'
-        ctx.fillText("Play", 625,515);
-        ctx.fillText("Dodge other circles for as long as you can!",625,560)
+        ctx.fillText("Play", 500,515);
+        ctx.fillText("Dodge large circles,eat smaller ones to grow.",500,560)
         // if ((this.game.mouse && this.game.mouse.y > 475 && this.game.mouse.y < 515)) {
         //     ctx.fillStyle = 'Yellow';
         //     ctx.font =  '64px ""'
@@ -44,9 +44,6 @@ class Menu{
         //     ctx.font =  '64px ""'
         //    // ctx.drawImage(ASSET_MANAGER.getAsset("./duckies.png"),0,0,72,72,585,515,48,48)
         // }
-        
-
-        ctx.fillStyle = 'Grey';
 
     };
 }

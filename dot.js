@@ -2,12 +2,14 @@ class Dot {
 
     constructor(game) {
         Object.assign(this, {game});
+        this.game.dot = this;
         this.removeFromWorld = false;
         this.x = 750;
         this.y = 425;
         this.radius = 10;
         this.boundingcircle = new BoundingCircle(this.x, this.y, this.radius);
         this.removeFromWorld = false;
+        this.score = 0;
     };
 
     update() {
@@ -21,11 +23,12 @@ class Dot {
                     if (that.boundingcircle.radius >= entity.boundingcircle.radius) {
                         that.radius += entity.boundingcircle.radius*0.10;
                         entity.regenerate();
+                        this.score++;
+                        ASSET_MANAGER.playAsset("./munch.mp3")
                         console.log("grow time");
                     } else {
                         console.log('YOU LOST');
                         that.die();
-                        console.log(this.removeFromWorld);
                     }
                 }
             }
@@ -53,7 +56,8 @@ class Dot {
     die() {
         // die animation/reset game
         this.removeFromWorld = true;
-        //ASSET_MANAGER.playAsset("Minecraft Damage (Oof) - Sound Effect (HD).mp3");
+        this.game.click = false;
+        ASSET_MANAGER.playAsset("./No.mp3");
         
     }
 };
